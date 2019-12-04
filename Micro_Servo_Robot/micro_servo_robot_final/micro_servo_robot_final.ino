@@ -1,5 +1,5 @@
 #include<Servo.h>
-Servo servo0, servo1, servo2, servo3;
+Servo servo0, servo1, servo2, servo3; //declare the servo objects
 int analogout[4] = {0, 0, 0, 0};
 const int pin_button = 12;
 int pin_button_state = 0;
@@ -14,24 +14,25 @@ int storage_loc;
 
 void setup() {
 
-  servo0.attach(11);
-  servo1.attach(10);
-  servo2.attach(9);
-  servo3.attach(6);
+  servo0.attach(11); //Attach the servo 0 to pwm pin 11
+  servo1.attach(10); //Attach the servo 1 to pwm pin 10  
+  servo2.attach(9);  //Attach the servo 2 to pwm pin 9
+  servo3.attach(6);  //Attach the servo 3 to pwm pin 6
   pinMode(pin_button, INPUT);
-  pinMode(A0, INPUT);
-  pinMode(A1, INPUT);
-  pinMode(A2, INPUT);
-  pinMode(A3, INPUT);
+  pinMode(A0, INPUT); // set A0 to input for potentiometer 1
+  pinMode(A1, INPUT);// set A1 to input for potentiometer 2
+  pinMode(A2, INPUT);// set A2 to input for potentiometer 3
+  pinMode(A3, INPUT);// set A3 to input for potentiometer 4
+
 
 }
 
 void loop() {
-  button();
-  mapval();
-  writeval();
-  record();
-  play();
+  button(); //function to check if button is pressed 
+  mapval(); //function to map the potentiometer valuse to the servo 
+  writeval();//function to write write the maped values to the servo 
+  record(); // record the values if the record button is pressed
+  play();  // play the reorded values 
 
 }
 
