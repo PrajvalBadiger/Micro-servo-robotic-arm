@@ -23,6 +23,7 @@ These instructions will get you a copy of the project up and <br> running on you
 - connections are done as ahow in the diagram image
 - Power the Arduino and the servo motors separatly
 - Rotate the potentiometers to control the movement <br> of the Robotic arm.
+
 ## Built With
 
 * [Ardiuno](https://www.arduino.cc) - An open source development board
